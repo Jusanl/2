@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hello Name</title>
+</head>
+<body>
+    <h1>Hello. What is your name?</h1>
+    <input id="userInput"> <br> <br>
+    <button onclick="myFunction()">Submit</button>
+    <h1 id="message">   </h1>
+
+
+    <style>
+       body {
+         background-color: bisque;
+         text-align: center;
+         color: floralwhite;
+       }
+       nav {
+         width:960px;
+         margin: 0 auto;
+
+       }
+
+       nav: before {
+         content:'';
+         display:block;
+         height:50px;
+         width:100%;
+         background:red;
+         position:absolute;
+         left:0;
+         z-index:-1;
+       }
+
+       ul {
+         margin:0;
+         padding:0;
+         list-style:none;
+         height:50px;
+       }
+
+       ul li {
+         float:left;
+       }
+
+       ul li a{
+         color:black;
+         display:block;
+         height:50px;
+         padding:0 30px;
+         text-transform:uppercase;
+         text-decoration:none;
+         line-height:50px;
+       }
+
+       ul li a:hover {
+         background:#d34d43;
+       }
+
+    </style>
+
+    <nav>
+      <ul>
+        <li><a href="task4_1.html">Age Calculator</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="task5_1.html">BMI</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="task6.html">Leap year</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="task7.html">Who's buying lunch?</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="task8.html">Fibonacci</a></li>
+      </ul>
+    </nav>
+
+    <script>
+         function myFunction() {
+           let userInput = document.querySelector("#userInput");
+           let message = document.querySelector("#message");
+
+
+
+           message.innerHTML = "Welcome to the website " + userInput.value;
+
+
+         }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's buying lunch?</title>
+</head>
+<style media="screen">
+  body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+   font-family: sans-serif;
+    background-color: bisque;
+    min-height: 100vh;
+  }
+  nav {
+    width:960px;
+    margin: 0 auto;
+
+  }
+
+  nav: before {
+    content:'';
+    display:block;
+    height:50px;
+    width:100%;
+    background:red;
+    position:absolute;
+    left:0;
+    z-index:-1;
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+    height:50px;
+  }
+
+  ul li {
+    float:left;
+  }
+
+  ul li a{
+    color:black;
+    display:block;
+    height:50px;
+    padding:0 30px;
+    text-transform:uppercase;
+    text-decoration:none;
+    line-height:50px;
+  }
+
+  ul li a:hover {
+    background:#d34d43;
+  }
+
+
+</style>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="js.html">Back</a></li>
+    </ul>
+  </nav>
+
+  <h1>Who's buying lunch?</h1>
+  <p>Aidana <br> Bekbolat <br> Mariya <br> Aleksandr <br> Diana</p>
+  <script>
+
+
+   function whosPaying(names) {
+
+   names = ["Angela","Ben","Jenny","Micheal","Chloe"];
+
+   name = Math.floor(Math.random() * names.length);
+
+   output = console.log(names[name] + " is going to buy lunch today!");
+
+   return output;
+
+  }
+
+  whosPaying();
+
+
+
+  </script>
+</body>
+</html>

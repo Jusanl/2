@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>leap year</title>
+ </head>
+ <style media="screen">
+   body{
+     margin: 0;
+     padding: 0;
+     text-align: center;
+    font-family: sans-serif;
+     background-color: bisque;
+     min-height: 100vh;
+   }
+   nav {
+     width:960px;
+     margin: 0 auto;
+
+   }
+
+   nav: before {
+     content:'';
+     display:block;
+     height:50px;
+     width:100%;
+     background:red;
+     position:absolute;
+     left:0;
+     z-index:-1;
+   }
+
+   ul {
+     margin:0;
+     padding:0;
+     list-style:none;
+     height:50px;
+   }
+
+   ul li {
+     float:left;
+   }
+
+   ul li a{
+     color:black;
+     display:block;
+     height:50px;
+     padding:0 30px;
+     text-transform:uppercase;
+     text-decoration:none;
+     line-height:50px;
+   }
+
+   ul li a:hover {
+     background:#d34d43;
+   }
+
+
+ </style>
+ <body>
+   <nav>
+     <ul>
+       <li><a href="js.html">Back</a></li>
+     </ul>
+   </nav>
+
+    <h1>To find leap year</h1>
+    <form name="myform">
+    Enter a number to find leap year:<br>
+    <input type="text" id="year"><br><br>
+    <button onclick="check_leapyear()">Check Now</button>
+    </form>
+
+    <script>
+      function check_leapyear() {
+        var leapyear=document.getElementById("year").value;
+        if((leapyear%4==0) && (leapyear%100!=0) || (leapyear%400==0)) {
+          alert(leapyear+" is a leap year");
+        }
+        else {
+          alert(leapyear+" is not a leap year");
+        }
+      }
+    </script>
+ </body>
+</html>
